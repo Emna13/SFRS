@@ -1,0 +1,13 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "MERN app",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd backend && npm run dev",
+    "client":"cd frontend && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client"
+  },
+  "author": "Emna",
+  "license": "ISC"
+}

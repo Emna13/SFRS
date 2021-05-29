@@ -1,0 +1,12 @@
+img{
+    max-width: 60%;
+    height: auto;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   align-content: center;
+    padding: 50px 50px 0px 50px ;
+
+}

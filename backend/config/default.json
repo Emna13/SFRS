@@ -1,0 +1,4 @@
+{
+    "mongoUri":"mongodb+srv://Emna:06121994@cluster0.5acbd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "secretOrKey":"my secret"
+}
