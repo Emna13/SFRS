@@ -77,31 +77,38 @@ export const getProfile = () => async (dispatch) => {
 };
 
 export const getProduct = () => async (dispatch) => {
+  const token = localStorage.getItem("token");
+  const config = {
+    headers: {
+      Authorization: token,
+    },
+  };
   dispatch({
     type: GET_PRODUCT,
   });
   try {
-    const products = await axios.get("/user/products");
+    const products = await axios.get("/user/products", config);
     dispatch({
       type: GET_PRODUCT_SUCCESS,
       payload: products.data,
     });
   } catch (error) {
+    console.log("error",error)
     dispatch({
       type: GET_PRODUCT_FAIL,
-      payload: error.response.data,
+      payload: error.data
     });
   }
 };
 
-export const addOrder=(newOrder)=>async(dispatch)=>{
- try {
-  const addOrd = await axios.post("/user/addorder", newOrder);
-  dispatch({
-    type: REGISTER_SUCCESS,
-    payload: addOrd.data,
-  });
- } catch (error) {
-   console.error(error)
- }
-}
+export const addOrder = (newOrder) => async (dispatch) => {
+  try {
+    const addOrd = await axios.post("/user/addorder", newOrder);
+    dispatch({
+      type: REGISTER_SUCCESS,
+      payload: addOrd.data,
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};

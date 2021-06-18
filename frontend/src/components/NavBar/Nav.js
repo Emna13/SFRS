@@ -5,7 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
-  { name: "Products", href: "#", current: false },
+  { name: "Products", href: "/products", current: false },
   { name: "Commands", href: "#", current: false },
   // { name: "Calendar", href: "#", current: false },
 ];
@@ -16,7 +16,7 @@ function classNames(...classes) {
 const Nav = () => {
   return (
     <div>
-      <Disclosure as="nav" className="bg-gray-800">
+      <Disclosure as="nav" className="bg-gray-500 mb-10">
         {({ open }) => (
           <div>
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
